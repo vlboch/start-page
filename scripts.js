@@ -8,8 +8,8 @@
 const searchInput = document.querySelector("#searchbar > input")
 const searchButton = document.querySelector("#searchbar > button")
 
-const lookup = $searchLookup$
-const engine = "$searchEngine$"
+const lookup = {"/":"/","deepl":"https://deepl.com/","reddit":"https://reddit.com/","maps":"https://maps.google.com/"}
+const engine = "google"
 const engineUrls = {
   deepl: "https://www.deepl.com/translator#-/-/{query}",
   duckduckgo: "https://duckduckgo.com/?q={query}",
@@ -48,7 +48,7 @@ searchButton.onclick = search
  * inject bookmarks into html
  */
 
-const bookmarks = $bookmarks$
+const bookmarks = [{"id":"VA50V0PzpT76en3X","label":"reddit","bookmarks":[{"id":"BAuq2xmWgfzgslPb","label":"r/startpages","url":"https://www.reddit.com/r/startpages/"},{"id":"QLRGm4HaIfXCUgfg","label":"r/typescript","url":"https://www.reddit.com/r/typescript/"},{"id":"fZRPQCXHsshX64tY","label":"r/reactjs","url":"https://www.reddit.com/r/reactjs/"}]},{"id":"jQsorhekVmfKJYcE","label":"design tools","bookmarks":[{"id":"ILNNpbz8e0AU8uTW","label":"pixlrx","url":"https://pixlr.com/x/"},{"id":"1KOc01aoFtFEL4cv","label":"image enlarger","url":"https://bigjpg.com/en"},{"id":"osyZTEQpW82VLl3f","label":"haikei","url":"https://app.haikei.app/"},{"id":"XsQWIT2eYWW13cWf","label":"css gradients","url":"https://larsenwork.com/easing-gradients/"}]},{"id":"BYVNZbz3zKkmeswH","label":"worth reading","bookmarks":[{"id":"zEorKKPWv38YYcxZ","label":"happy hues","url":"https://www.happyhues.co/"},{"id":"07Y3lgmfXBFywyCx","label":"styled-components","url":"https://www.joshwcomeau.com/react/demystifying-styled-components/"},{"id":"f0VrLkgapb9uhUM9","label":"react docs","url":"https://reactjs.org/docs/getting-started.html"}]},{"id":"MAVAVv56EXjlfpdn","label":"sources","bookmarks":[{"id":"Fl8ljuJJl4H01Pk8","label":"icons","url":"https://feathericons.com/"},{"id":"GDYlkZRwPjJtPOAx","label":"gif","url":"https://designyoutrust.com/2019/05/the-chill-and-retro-motion-pixel-art-of-motocross-saito/"},{"id":"e0I6od3RPnuvQeWz","label":"@startpage","url":"https://prettycoffee.github.io/startpage"},{"id":"eiCQGuMUsK7geKDC","label":"author","url":"https://prettycoffee.github.io/"}]}]
 
 const createGroupContainer = () => {
   const container = document.createElement("div")
